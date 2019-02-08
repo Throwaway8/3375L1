@@ -3,7 +3,7 @@
 volatile int * SW_ptr = (int *)SW_BASE;
 volatile int * HEX_ptr = (int *)HEX3_HEX0_BASE;
 int status = 1;
-volatile int DELAY_LENGTH; // volatile so it survives compilation
+volatile int DELAY_LENGTH; 
 volatile int delay_count; 
 void DisplayHex(int value)
 {
