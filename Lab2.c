@@ -112,5 +112,9 @@ int main(void) {
 			reset();
 			*(Key_ptr) &= 0x0;
 		}
+		else
+		{
+			*(Key_ptr) &= = 0x0;
+		}
 	}
 }
