@@ -1,5 +1,5 @@
 #include "address_map_arm.h"
-
+//Stop watch program
 volatile int * load_ptr = (int*)HPS_TIMER0_BASE;
 volatile int * currVal_ptr = (int*)HPS_TIMER0_BASE + 1;
 volatile int * ctrl_ptr = (int*)HPS_TIMER0_BASE + 2;
