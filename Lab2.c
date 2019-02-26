@@ -27,19 +27,19 @@ void start()
 	lookUpTable[7] = 0x7;
 	lookUpTable[8] = 0x7F;
 	lookUpTable[9] = 0x6F;
-
-	while (1)
-	{
-		*(ctrl_ptr) &= 0x000;
-		*(load_ptr) |= 0xF4240;
-		*(ctrl_ptr) |= 0b011;
-
-		*(hex_ptr) = 0x3F;
+	
+	*(hex_ptr) = 0x3F;
 		*(hex_ptr + 1) = 0x3F;
 		*(hex_ptr+2) = 0x3F;
 		*(hex_ptr+3) = 0x3F;
 		*(hex_ptr2) = 0x3F;
 		*(hex_ptr2+1) = 0x3F;
+	
+	while (1)
+	{
+		*(ctrl_ptr) &= 0x000;
+		*(load_ptr) |= 0xF4240;
+		*(ctrl_ptr) |= 0b011;
 
 		if (*(interrupt_ptr) &= 0b1 == 1)
 		{
